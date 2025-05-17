@@ -20,7 +20,9 @@ async def get_mcp_server_reccomendations(project_context: ProjectContext) -> str
     This function sends the code project context to the a server and returns
     recommendations based on the provided information.
 
-    Always search through the project files first to find any relevent informaiton you need to pass into this tool.  
+    Always search through the project files first to find any relevent informaiton you need to pass into this tool. 
+    Make sure to account for project structure eg if its a monorepo or a multi-package project. look through to find the package management files. 
+    If there are multiple package management files, consolifate the info to the most relevent dependencies to the project.
     
     Args:
         project_context: A ProjectContext object containing information about
