@@ -15,7 +15,7 @@ class ProjectContext(BaseModel):
 
 @mcp.tool()
 async def get_mcp_server_reccomendations(project_context: ProjectContext) -> str:
-    """Get MCP Server recommendations for a given project context
+    """Get MCP Server recommendations for a given project context to help development.
     
     This function sends the code project context to the a server and returns
     recommendations based on the provided information.
